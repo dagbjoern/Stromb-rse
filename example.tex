@@ -75,13 +75,34 @@
 
 
 
+{
+\setbeamertemplate{footline}{}
 \begin{frame}{Europäisches Verbundsystem}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+  \item ensteht aus mehrere von einander getrennte Verbundsysteme
+\item Verbundsystem
+Zusammenschluss von Höchst und Hochspannungsnetzen der Länder zur z.B. UCT  (Union for the Co-ordination of the Transmission of Electricity)
+  \item Verband Europäischer Übertragnungsnetzbetreiber
+   European Network of Transmission System (ENTSO-E) übernimmt Koorodination
+der Verbundsysteme
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+    \begin{figure}
+\includegraphics[width=0.9\textwidth]{images/Euronetz.png}
+\end{figure}
+\end{column}
+\end{columns}
+% Quelle: https://commons.wikimedia.org/w/index.php?curid=1387849
 \end{frame}
+}
+
 {
 \setbeamertemplate{footline}{}
 \begin{frame}
   \begin{columns}
-
   \begin{column}{0.5\textwidth}
 %\frametitle{Netzebenen}
 \begin{itemize}
@@ -98,24 +119,130 @@
 \end{columns}
 \end{frame}
 }
+
 \begin{frame}
   \begin{itemize}
     \item Hoch-/Mittel-/Niederspannungs Ebenen
-     werden von den jeweilige Stadtwerke verwaltet
-    \item Die Höchstspannung Ebene teilen sich in Deutschland die Übertragungsnetzbetreiber Tennet, 50-Hertz, Amprion und Transnet
+     werden regional und lokal von Verteilernetzbetreibern verwaltet
+    \item Die Höchstspannung Ebene teilen sich in
+    Deutschland die Übertragungsnetzbetreiber
+    \begin{itemize}
+      \item[-] Tennet
+      \item[-] 50-Hertz
+      \item[-] Amprion
+      \item[-] Transnet
   \end{itemize}
+\item vielleicht die logos hin???
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Netzfrequenz}
-Richtfrequenz von $\SI{50}{\hertz}$ im Europäischen Verbundnetz
-Abweichungen können zu Problemen wie
 \begin{itemize}[<+->]
-  \item test ...
-  \item test 2
+\item Richtfrequenz von $\SI{50}{\hertz}$ im Europäischen Verbundnetz
+\item Hängt von Rotationsgeschwindigkeit der Synchronisierten Generatoren zusammen\\
+Generatoren ab
+% Um dieses umgangssprachlicher zu erklären, wird
+% gerne der Alltagsvergleich mit einem Fahrrad herangezogen:
+% Auf einer gleichmässigen Fläche kann relativ einfach eine
+% konstante Trittgeschwindigkeit gehalten werden.
+% An einer Steigung (zu vergleichen mit steigender Last im Stromnetz)
+% muss mehr Kraft aufgewendet werden, um die Trittfrequenz
+% beizubehalten oder sie kann sogar (kurzeitig) sinken,
+% bis man sich auf die Steigung eingestellt hat.
+% Anders herum steigt die (Tritt-)Frequenz an einem Gefälle
+% kurz an, bis man sie (zum Beispiel durch Bremsen) wieder
+% auf die „normale“ Nennfrequenz gesenkt hat.
+\item Zu starke Abweichungen können Zerstörung der Generatoren und anderen Geräten führen.
+% \begin{itemize}[<+->]
+%   \item test ...
+%   \item test 2
+% \end{itemize}
+führen
+\item Abweichungen in der Frequenz entstehen durch Schwankungen
+der Relation von abgenommener und erzeugter Leistung.
 \end{itemize}
-führen.\\
-Abweichungen in der Frequenz entstehen durch Schwankungen der Relation von abgenommener und erzeugter Leistung
+\end{frame}
+
+{
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \begin{figure}
+  \includegraphics[width=0.9\textwidth]{images/Frequenz.png}
+  \end{figure}
+%Quelle:http://www.netzfrequenz.info/aktuelle-netzfrequenz-full
+\end{frame}
+}
+
+\begin{frame}{Regelung der Netzfrequenz}
+Notwendigkeit von Regelbarer Leistung um Frequenz konstant zu halten
+\begin{itemize}
+\item Primärregelung
+  \begin{itemize}
+    \item[-] automatische vollständige Aktivierung innerhalb von \SI{30}{\second}
+    \item[-] Abdeck Zeitraum \num{0}<\SI{15}{\minute}
+    \item[-] Bereitstellung durch alle ÜNB im ENTSO-E-Gebiet
+  \end{itemize}
+\item Sekundärregelung
+\begin{itemize}
+\item[-] automatische Aktivierung innerhalb von \SI{5}{\minute}
+\item[-] ...
+\end{itemize}
+\item Tertiärregelung(Minutenreserve)
+\begin{itemize}
+  \item[-] Aktivierung innerhalb von \SI{15}{\minute}
+  \item[-] Abdeck Zeitraum mehrere Stunden bei Störungen
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+{
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \begin{figure}
+  \includegraphics[width=0.9\textwidth]{images/Regelleistung.png}
+\end{figure}
+%Quelle:https://fenecon.de/page/stromspeicher-energy-pool
+\end{frame}
+}
+
+\begin{frame}{Blackout}
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+\end{frame}
+
+\begin{frame}{Strombörse}
+\begin{itemize}
+  \item Standort der European Energy Exchange (EEX) in Leipzig
+\item irgendwas mit paris
+  \item Stromhandel seit \num{2000}
+  \item Nicht nur Handel von Strom sondern auch allen Energie Produkte wie (...)
+  \item Unterscheidung zwischen Spotmarkt und Terminmarkt
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Spotmarkt und Meritorder}
+\begin{itemize}
+\item Spot mark in Paris and der EXAA
+\item Handel von kurzfristig lieferbaren Strommengen
+\item Im Day-Ahead-Handel ein Tag vorraus
+\end{itemize}
+\end{frame}
+
+{
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \begin{figure}
+  \includegraphics[width=1.1\textwidth]{images/stromprodukte.jpg}
+\end{figure}
+%Quelle:https://www.next-kraftwerke.de/wissen/strommarkt/spotmarkt-epex-spot
+\end{frame}
+}
+
+
+\begin{frame}{Terminmarkt}
 
 \end{frame}
 
+\begin{frame}{Entwicklung}
+
+\end{frame}
 \end{document}
