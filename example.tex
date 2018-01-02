@@ -16,6 +16,7 @@
   \fi
 \fi
 
+\newcommand*\xRightarrow[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}}
 
 % Mathematik
 \usepackage{amsmath}
@@ -118,9 +119,19 @@ der Verbundsysteme
 \end{column}
 \end{columns}
 \end{frame}
+
+
+\begin{frame}
+\begin{figure}
+  \includegraphics[width=1\textwidth]{images/netzbetrieb-deutsches-stromnetz.jpg}
+\end{figure}
+%:Quelle:
+\end{frame}
 }
 
 \begin{frame}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
   \begin{itemize}
     \item Hoch-/Mittel-/Niederspannungs Ebenen
      werden regional und lokal von Verteilernetzbetreibern verwaltet
@@ -132,8 +143,15 @@ der Verbundsysteme
       \item[-] Amprion
       \item[-] Transnet
   \end{itemize}
-\item vielleicht die logos hin???
 \end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+    \includegraphics[width=1\textwidth]{images/UNB.jpg}
+%Quelle:http://www.bpb.de/politik/wirtschaft/energiepolitik/148524/ausbau-des-stromnetzes
+\end{figure}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Netzfrequenz}
@@ -205,9 +223,33 @@ Notwendigkeit von Regelbarer Leistung um Frequenz konstant zu halten
 \end{frame}
 }
 
+\begin{frame}{Energiewende und folgen im Stromnetz}
+  \begin{columns}
+  \begin{column}{0.5\textwidth}
+Konventionelles Stromnetz:
+\begin{itemize}
+  \item Kraftwerkleistungen werden an Lastprofil angepasst
+  \item "Einbahnstraße im Stromnetz" Kraftwerk$\rightarrow$Verbraucher
+Höchspannung$\rightarrow$Niederspannung
+\end{itemize}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+Neues Stromnetz:
+\begin{itemize}
+\item EE-Kraftwerkleistungen nur noch bedingt (z.B Wasser) oder garnicht (z.B Wind/Sonne) steuerbar\\$\rightarrow$ somit keine Anpassungs an Lastprofil möglich
+\item Durch Erneuerbarenenergien Höchstspannung$\leftrightarrows$Niederspannung
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+
 \begin{frame}{Blackout}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 \end{frame}
+
+
+
 
 \begin{frame}{Strombörse}
 \begin{itemize}
@@ -219,11 +261,12 @@ Notwendigkeit von Regelbarer Leistung um Frequenz konstant zu halten
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Spotmarkt und Meritorder}
+\begin{frame}{Spotmarkt}
 \begin{itemize}
-\item Spot mark in Paris and der EXAA
+\item Spotmarkt in Paris and der EXAA
 \item Handel von kurzfristig lieferbaren Strommengen
-\item Im Day-Ahead-Handel ein Tag vorraus
+\item Im Intraday-Handel (Lieferung am Selbentag)
+\item Im Day-Ahead-Handel (Lieferung am Folgetag)
 \end{itemize}
 \end{frame}
 
@@ -237,12 +280,63 @@ Notwendigkeit von Regelbarer Leistung um Frequenz konstant zu halten
 \end{frame}
 }
 
+\begin{frame}{Merit-Order}
+\begin{itemize}
+  \item Beschreibungsmodell der Preisbildung auf dem Strommarkt
+  \item orientiert sich an den Grenzkosten der Kraftwerke
+  (Grenzkosten enspricht kosten für die letzte produzierte Megawattstunde)
+\item Kraftwerke mit niedrigen Grenzkosten werden bei der
+ Einspeisung bevorzugt bis Nachfrage gedeckt ist.
+\item Börsenpreis ergibt sich aus schnittstelle von Angebot und Nachfrage
+\begin{itemize}
+  \item[$\rightarrow$] Grenzkosten des Kraftwerkes, welches zuletzt den
+  Zuschlag zur Einspeisung erhält, definiert Börsenpreis für alle eingespeisten Kraftwerke("uniform pricing")
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+{
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \begin{figure}
+  \includegraphics[width=1\textwidth]{images/Merit-order-curve-2.jpg}
+\end{figure}
+%Quelle:https://www.next-kraftwerke.be
+\end{frame}
+}
+
+{
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \begin{figure}
+  \includegraphics[width=1\textwidth]{images/Merit.png}
+\end{figure}
+%Quelle:https://www.next-kraftwerke.be
+\end{frame}
+}
 
 \begin{frame}{Terminmarkt}
+\begin{itemize}
+  \item Handel von Strommengen, die zu einem festen Termin zu verfügung gestellt werden (Strom-Futures)
+  \item bis zu 6 Jahre Strom im vorraus Kaufen
+  \item Jahr-, Quatal-, Monat-, Woche-,  Wochenende- und Tagkontrakt
+  \item Preis richtig sich an den Börsenindex der Strombörse Phelix (Physical Electricity Index)
+\end{itemize}
+\end{frame}
 
+\begin{frame}{Erneuerbare-Energie-Gesetz EEG}
+   \begin{itemize}
+     \item Regelt die Einspeisung des EE-Stromes
+     \item Verpflichtung an die Netzbetreiber EE-Strom vorrangig in das Stromnetz einzuspeisen 
+   \end{itemize}
 \end{frame}
 
 \begin{frame}{Entwicklung}
 
 \end{frame}
 \end{document}
+
+
+\begin{frame}{Paradigmenwechsel}
+
+\end{frame}
