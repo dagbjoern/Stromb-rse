@@ -75,6 +75,20 @@
 \end{frame}
 
 
+\begin{frame}{Stromnetz-Historisch}
+\begin{itemize}
+  \item Begin der Elektrifizierung 1880 mit der Industialisierung
+  \item Zunächst nur Inselnetze mit Gleichstrom zur Beleuchtung
+  \item Wechselstrom setzte sich gegen Gleichstrom wegen Vorteilen wie
+  \begin{itemize}
+    \item[-] Einfache Transformation der Spannung durch ein Transformator
+    \item[$\rightarrow$] Einfaches Umspannen auf Hochspannung möglich
+    somit weniger Verluste bei langen Leitungen
+    \item[-] große Verbundnetze möglich, die aber alle synchron mit der selben Frequenz betrieben werden.
+  \end{itemize}
+  \item Heute nur vereinzelt Gleichstrom z.B. bei Verkehr und HGÜ
+\end{itemize}
+\end{frame}
 
 {
 \setbeamertemplate{footline}{}
@@ -82,7 +96,7 @@
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
-  \item ensteht aus mehrere von einander getrennte Verbundsysteme
+  \item besteht aus mehrere von einander getrennte Verbundsysteme
 \item Verbundsystem
 Zusammenschluss von Höchst und Hochspannungsnetzen der Länder zur z.B. UCT  (Union for the Co-ordination of the Transmission of Electricity)
   \item Verband Europäischer Übertragnungsnetzbetreiber
@@ -100,27 +114,56 @@ der Verbundsysteme
 \end{frame}
 }
 
+\begin{frame}
+  \begin{block}{Hochspannungs-Gleichstrom-Übertragung (HGÜ)}
+    \begin{itemize}
+      \item Dient zur Energieübertragung zwischen zwei weit entfernten Punkten
+      \item Ab $\SI{750}{\kilo\meter}$ effizienter als Leitungen mit Wechselstrom
+  \item[] \textbf{\textcolor{tugreen}{Ursache:}} HGÜ: Ohmscherwiederstand
+  \item[] \textbf{\textcolor{tulight}{Ursache:}} Wechselstrom: Ohmscherwiederstand, Skineffekte und Blindwiederstand
+% \begin{tabular}{c c}
+%  AC    &          DC \\
+% \hline
+% \multicolumn{2}{c}{Ohmscherwiederstand}\\
+% Skin-Effekt &  - \\
+% Blindwiederstand& -\\
+%  \end{tabular}
+% \begin{itemize}
+      \item Verbindet die getrennten und asynchronen Verbundsysteme Europas und bspw. Offshore-Windparks mit dem Festland
+      \end{itemize}
+\end{block}
+
+ \end{frame}
+
 {
 \setbeamertemplate{footline}{}
 \begin{frame}
   \begin{columns}
-  \begin{column}{0.5\textwidth}
-%\frametitle{Netzebenen}
-\begin{itemize}
-  \item Höchstspannung $\num{380}$/$\SI{220}{\kilo\volt}$
-  \item Hochspannung  $\SI{110}{\kilo\volt}$
-  \item Mittelspannung  $\num{30}$/$\num{20}$/$\SI{10}{\kilo\volt}$
-  \item Niederspannung $\num{230}$/$\SI{400}{\volt}$
-\end{itemize}
-\end{column}
 \begin{column}{0.5\textwidth}
 \includegraphics[width=1\textwidth]{images/netzebenen.jpg}
 %Quelle: http://www.bpb.de/politik/wirtschaft/energiepolitik/148524/ausbau-des-stromnetzes
 \end{column}
+\begin{column}{0.5\textwidth}
+  %\frametitle{Netzebenen}
+  \begin{itemize}
+    \item besteht aus \num{7} Netzebenen
+    \item \num{4} Spannungsebenen
+    \begin{itemize}
+      \item[-] Höchstspannung $\num{220}$-$\SI{380}{\kilo\volt}$
+      \item[-] Hochspannung  $\num{60}$-$\SI{110}{\kilo\volt}$
+      \item[-] Mittelspannung  $\num{6}$-$\SI{50}{\kilo\volt}$
+      \item[-] Niederspannung $\num{230}$/$\SI{400}{\volt}$
+    \end{itemize}
+    \item \num{3} Transformationsebenen jeweils zwischen den Spannungsebenen
+  \end{itemize}
+\end{column}
 \end{columns}
 \end{frame}
+}
 
 
+{
+\setbeamertemplate{footline}{}
 \begin{frame}
 \begin{figure}
   \includegraphics[width=1\textwidth]{images/netzbetrieb-deutsches-stromnetz.jpg}
@@ -155,7 +198,7 @@ der Verbundsysteme
 \end{frame}
 
 \begin{frame}{Netzfrequenz}
-\begin{itemize}[<+->]
+\begin{itemize}% [<+->]
 \item Richtfrequenz von $\SI{50}{\hertz}$ im Europäischen Verbundnetz
 \item Hängt von Rotationsgeschwindigkeit der Synchronisierten Generatoren zusammen\\
 Generatoren ab
@@ -176,8 +219,12 @@ Generatoren ab
 %   \item test 2
 % \end{itemize}
 führen
-\item Abweichungen in der Frequenz entstehen durch Schwankungen
-der Relation von abgenommener und erzeugter Leistung.
+\item Im Stromnetz kann keine Energiegespeichert werden
+  \begin{itemize}
+    \item[\rightarrow] abgenommene Leistung $\stackrel{!}{=}$ erzeugter Leistung
+  \end{itemize}
+  \item Abweichungen in der Frequenz entstehen durch Schwankungen
+  der Relation von abgenommener und erzeugter Leistung.
 \end{itemize}
 \end{frame}
 
@@ -194,24 +241,48 @@ der Relation von abgenommener und erzeugter Leistung.
 \begin{frame}{Regelung der Netzfrequenz}
 Notwendigkeit von Regelbarer Leistung um Frequenz konstant zu halten
 \begin{itemize}
-\item Primärregelung
+  \item Positive Regelenergie:
   \begin{itemize}
-    \item[-] automatische vollständige Aktivierung innerhalb von \SI{30}{\second}
-    \item[-] Abdeck Zeitraum \num{0}<\SI{15}{\minute}
-    \item[-] Bereitstellung durch alle ÜNB im ENTSO-E-Gebiet
+    \item[-] Mehr Strom muss in das Netz eingespeist werden
+    \item[-] Weniger Strom muss verbraucht werden
   \end{itemize}
-\item Sekundärregelung
-\begin{itemize}
-\item[-] automatische Aktivierung innerhalb von \SI{5}{\minute}
-\item[-] ...
-\end{itemize}
-\item Tertiärregelung(Minutenreserve)
-\begin{itemize}
-  \item[-] Aktivierung innerhalb von \SI{15}{\minute}
-  \item[-] Abdeck Zeitraum mehrere Stunden bei Störungen
-\end{itemize}
+  \item Negative Regelenergie:
+  \begin{itemize}
+    \item[-] Stromeinspeisung muss schnell reduziert werden
+    \item[-] Mehr Strom muss verbraucht werden
+  \end{itemize}
+  \item[\rightarrow] Krafwerke oder Verbraucher mit einer dieser Eigenschaften eignen sich als Regelenergie
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item Primärregelung PRL
+    \begin{itemize}
+      \item[-] automatische vollständige Aktivierung innerhalb von \SI{30}{\second}
+      \item[-] Abdeck Zeitraum \num{0}<\SI{15}{\minute}
+      \item[-] Bereitstellung durch alle ÜNB im ENTSO-E-Gebiet
+      \item[-] Frequenzabhängige Lasten Vorteilhaft z.B. ?Asynchronmotor?
+      \item[-] ?keine Unterscheidung zwischen positiver und negativer Regelenergie?
+    \end{itemize}
+    \item Sekundärregelung SRL
+    \begin{itemize}
+      \item[-] automatische Aktivierung durch betroffenen ÜNB
+      \item[-] Vollständige Aktivierung innerhalb von \SI{5}{\minute}
+      \item[-] Unterscheidung zwischen positiver und negativer Regelenergie
+      \item[-] z.B. Pumpspeicherkraftwerken, Gasturbinen, Biogasanlagen oder Blockheizkraftwerke
+    \end{itemize}
+    \item Tertiärregelung(Minutenreserve) MRL
+    \begin{itemize}
+      \item[-] Aktivierung innerhalb von \SI{15}{\minute}
+      \item[-] Abdeck Zeitraum mehrere Stunden bei Störungen
+      \item[-] Unterscheidung zwischen positiver und negativer Regelenergie
+      \item[-] Kraftwerke identisch zu SRL oder Verbraucher deren Lasten abgeworfen werden
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
 
 {
 \setbeamertemplate{footline}{}
@@ -236,16 +307,20 @@ Höchspannung$\rightarrow$Niederspannung
   \begin{column}{0.5\textwidth}
 Neues Stromnetz:
 \begin{itemize}
-\item EE-Kraftwerkleistungen nur noch bedingt (z.B Wasser) oder garnicht (z.B Wind/Sonne) steuerbar\\$\rightarrow$ somit keine Anpassungs an Lastprofil möglich
-\item Durch Erneuerbarenenergien Höchstspannung$\leftrightarrows$Niederspannung
+\item EE-Kraftwerkleistungen nur noch bedingt (z.B Wasser) oder garnicht (z.B Wind/Sonne) steuerbar
+\begin{itemize}
+  \item[$\rightarrow$] keine Anpassungs an Lastprofil möglich
+\end{itemize}
+\item Durch Erneuerbarenenergiequellen  Höchstspannung$\leftrightarrows$Niederspannung
 \end{itemize}
 \end{column}
 \end{columns}
+\textbf{\textcolor{tugreen}{Fazit:}} Durch Energiewende Netzumbau und ausbau nötig
 \end{frame}
 
 
 \begin{frame}{Blackout}
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 \end{frame}
 
 
@@ -253,22 +328,19 @@ Neues Stromnetz:
 
 \begin{frame}{Strombörse}
 \begin{itemize}
-  \item Standort der European Energy Exchange (EEX) in Leipzig
-\item irgendwas mit paris
-  \item Stromhandel seit \num{2000}
-  \item Nicht nur Handel von Strom sondern auch allen Energie Produkte wie (...)
-  \item Unterscheidung zwischen Spotmarkt und Terminmarkt
+  \item existiert seit \num{2000} in Europa
+  \item Strombörsen in Europa koordiniert von der EEX Group
+  \item Deutschland, Frankreich, Österreich
+  und Schweiz handeln an European Energy Exchange (EEX) in Leipzig
+ und European Power Exchange (EPEX SPOT) in Paris
+ \item Unterscheidung zwischen Spotmarkt, Terminmarkt und Regelenergiemarkt
+\item Gehandelte Produkte zusätzlich zu Strom:
+    \begin{itemize}
+      \item[-]Öl, Gas, Kohle, Metal, Frachtprodukte, Emissionsberechtigungen sowie Agraprodukte
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Spotmarkt}
-\begin{itemize}
-\item Spotmarkt in Paris and der EXAA
-\item Handel von kurzfristig lieferbaren Strommengen
-\item Im Intraday-Handel (Lieferung am Selbentag)
-\item Im Day-Ahead-Handel (Lieferung am Folgetag)
-\end{itemize}
-\end{frame}
 
 {
 \setbeamertemplate{footline}{}
@@ -279,6 +351,15 @@ Neues Stromnetz:
 %Quelle:https://www.next-kraftwerke.de/wissen/strommarkt/spotmarkt-epex-spot
 \end{frame}
 }
+
+\begin{frame}{Spotmarkt}
+  \begin{itemize}
+    \item Spotmarkt in Paris and der EPEX SPOT
+    \item Handel von kurzfristig lieferbaren Strommengen in bestimmten Blöcken
+    \item Im Intraday-Handel (Lieferung am Selbentag)
+    \item Im Day-Ahead-Handel (Lieferung am Folgetag)
+  \end{itemize}
+\end{frame}
 
 \begin{frame}{Merit-Order}
 \begin{itemize}
@@ -317,13 +398,24 @@ Neues Stromnetz:
 
 \begin{frame}{Terminmarkt}
 \begin{itemize}
-  \item Handel von Strommengen, die zu einem festen Termin zu verfügung gestellt werden (Strom-Futures)
+  \item Terminmarkt in Leipzig and der EEX
+  \item Handel von Strommengen, die zu einem festen Termin zu Verfügung gestellt werden (Strom-Futures)
   \item bis zu 6 Jahre Strom im vorraus Kaufen
   \item Jahr-, Quatal-, Monat-, Woche-,  Wochenende- und Tagkontrakt
-  \item Preis richtig sich an den Börsenindex der Strombörse Phelix (Physical Electricity Index)
+  \item Preis richtig sich an Börsenindex der Strombörse z.B. Phelix (Physical Electricity Index)
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Regelenergiemarkt}
+\begin{itemize}
+  \item Bedarf an Regelenergien von PRL, SRL und MRL werden durch Ausschreibung
+der ÜNB gedeckt
+\item PRL und SRL werden jede Woche Neu ausgeschrieben
+\item MRL werden Täglich neu ausgeschrieben und nach Merit-Order-Liste bei Bedarf abgerufen
+\item Preis für Regleenergien ??
+\end{itemize}
+
+\end{frame}
 \begin{frame}{Erneuerbare-Energien-Gesetz EEG}
    \begin{itemize}
      \item Das EEG wurde im Jahr 2000 eingeführt und mehrmals überarbeitet aktuell EEG 2017
