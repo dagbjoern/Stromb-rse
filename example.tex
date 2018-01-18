@@ -27,6 +27,7 @@
 \usepackage{hyperref}
 \usepackage{bookmark}
 \usepackage{siunitx}
+\usepackage{overpic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%-------------Hier Titel/Autor/Grafik/Lehrstuhl eintragen--------------%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,8 +44,6 @@
 
 \begin{document}
 \maketitle
-\begin{frame}
-\end{frame}
 
 \begin{frame}{Gliederung}
 \begin{itemize}
@@ -60,6 +59,7 @@
   \end{itemize}
 \end{itemize}
 \end{frame}
+
 \begin{frame}
 \begin{itemize}
  \item Strombörse
@@ -75,19 +75,45 @@
 \end{frame}
 
 
+
+
 \begin{frame}{Stromnetz-Historisch}
 \begin{itemize}
   \item Beginn der Elektrifizierung 1880 mit der Industrialisierung
   \item zunächst nur Inselnetze mit Gleichstrom zur Beleuchtung
   \item Wechselstrom setzte sich gegen Gleichstrom wegen Vorteilen wie
   \begin{itemize}
-    \item[-] einfache Transformation der Spannung durch einen Transformator
-    \item[$\rightarrow$] einfaches Umspannen auf Hochspannung möglich
-    somit weniger Verluste bei langen Leitungen
+    \item[-] damals Transformator einzige Möglichkeit Hochspannung zu erzeugen
+    \item[$\rightarrow$] einfaches Umspannen von Hochspannung zu Verbraucherspannung möglich
+    somit weniger Verluste bei langen Leitungen und "sichere" Niederspannung bei Verbraucher
     \item[-] große Verbundnetze möglich, die aber alle synchron mit gleicher Frequenz betrieben werden.
   \end{itemize}
-  \item heute nur vereinzelt Gleichstrom z. B. bei Verkehr und HGÜ
+  \item heutige Verbundnetze werden mit $\SI{50}{\hertz}$ bzw. $\SI{60}{\hertz}$ Drehstrom(Dreiphasiger Wechselstrom) betrieben
+  \item Nur vereinzelt Gleichstrom (z. B. bei Verkehr und HGÜ) jedoch wieder steigend
 \end{itemize}
+\end{frame}
+%
+
+\begin{frame}{Dreiphasiger Wechselstrom}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+\begin{itemize}
+  \item Drei Wechselströme die um $\SI{120}{\degree}$ zueinander verschoben sind
+  \item einfache Erzeugung durch Drehstromgenerator
+  \item Steckdose im Zuhaus benutzten jeweils nur eine der drei Wechselströme
+  \item Bzw. Öfen und Motoren nutzen alle drei Phasen( konstant Leistung )
+  \item Materialaufwand für Leitung geringer als bei einphasiger Wechselstrom bei gleicher Leistung,
+   da Phasen in seperaten Kabeln geführt werden
+  \item Besitzt zwei abgreifbare Spannungen  Nennspannung(Phase-Phase) und Phasenspannung(Phase-Null)
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+  \begin{figure}
+\includegraphics[width=0.9\textwidth]{images/Drehstromgenerator.jpg}
+%www.c-turbines.ch
+\end{figure}
+\end{column}
+\end{columns}
 \end{frame}
 
 {
@@ -96,11 +122,12 @@
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
-  \item besteht aus mehrere voneinander getrennte Verbundsysteme
-\item Verbundsystem
+\item besteht aus mehrere voneinander getrennte Verbundsysteme
+\item Verbundsystem:
 Zusammenschluss von Höchst und Hochspannungsnetzen der Länder zur z. B. UCT  (Union for the Co-ordination of the Transmission of Electricity)
-  \item Verband Europäischer Übertragungsnetzbetreiber
-   European Network of Transmission System (ENTSO-E) übernimmt Koordination
+%\item Verbundnetze werden mit Drehstrom betrieben (Drehstrom $\stackrel{^}{=}$ 3-phasigen Wechselstrom)
+\item Verband Europäischer Übertragungsnetzbetreiber
+European Network of Transmission System (ENTSO-E) übernimmt Koordination
 der Verbundsysteme
 \end{itemize}
 \end{column}
@@ -114,13 +141,16 @@ der Verbundsysteme
 \end{frame}
 }
 
-\begin{frame}
+
+  \begin{frame}
+
   \begin{block}{Hochspannungs-Gleichstrom-Übertragung (HGÜ)}
     \begin{itemize}
       \item dient zur Energieübertragung zwischen zwei weit entfernten Punkten
       \item ab $\SI{750}{\kilo\meter}$ effizienter als Leitungen mit Wechselstrom
   \item[] \textbf{\textcolor{tugreen}{Ursache:}} HGÜ: ohmscher Widerstand
-  \item[] \textbf{\textcolor{tulight}{Ursache:}} Wechselstrom: ohmscher Widerstand, Skin-Effekt und Blindwiderstand
+  \item[] \textbf{\textcolor{tulight}{Ursache:}} Wechselstrom: ohmscher Widerstand, Skin-Effekt, kapazitiver Widerstand und Blindwiderstand
+%Quelle:https://www.weltderphysik.de/gebiete/technik/energie/speichern-und-transportieren/strom/hochspannung/
 % \begin{tabular}{c c}
 %  AC    &          DC \\
 % \hline
@@ -132,8 +162,26 @@ der Verbundsysteme
       \item verbindet die getrennten und asynchronen Verbundsysteme Europas und bspw. Offshore-Windparks mit dem Festland
       \end{itemize}
 \end{block}
+\end{frame}
 
- \end{frame}
+{
+\setbeamertemplate{footline}{}
+\begin{frame}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{figure}
+     \includegraphics[width=0.9\textwidth]{images/HGUeuropa.png}
+ \end{figure}
+\end{column}
+\begin{column}{0.6\textwidth}
+  \begin{figure}
+      \includegraphics[width=1\textwidth]{images/HGU.PNG}
+  \end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+}
+
 
 {
 \setbeamertemplate{footline}{}
@@ -161,20 +209,35 @@ der Verbundsysteme
 \end{frame}
 }
 
-
 {
 \setbeamertemplate{footline}{}
 \begin{frame}
-\begin{figure}
-  \includegraphics[width=1\textwidth]{images/netzbetrieb-deutsches-stromnetz.jpg}
-\end{figure}
-%:Quelle:
+  \begin{figure}
+    \includegraphics[width=0.6\textwidth]{images/Stromversorgung.png}
+  \end{figure}
+  %:Quelle:
 \end{frame}
 }
 
 \begin{frame}
+  \begin{itemize}
+    \item Leistungsflüsse in den Netzen werden durch Änderung
+      von Blind- und Wirkleistung sowie durch Phasenverschiebungen
+      zur Netzstablilisierung angepasst
+      (FACTS Flexible AC Transmission Systems)
+    \item Höchstpannung für möglichst verlustfreie Leitung
+          \begin{align*}
+P_{\text{Verlust}}&= U_\text{R}\cdot I = R \cdot I^2 = \rho\cdot\frac{l}{A} \cdot I^2  \\
+P_\text{ges}&=U\cdot I \Leftrightarrow I=\frac{P_\text{ges}}{U}\\
+P_{\text{Verlust}}&=\rho\cdot\frac{l}{A} \cdot \frac{P_\text{ges}^2}{U^2}
+          \end{align*}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+  \begin{column}{0.5\textwidth}
   \begin{itemize}
     \item Hoch-/Mittel-/Niederspannungs Ebenen
      werden regional und lokal von Verteilernetzbetreibern verwaltet
@@ -190,7 +253,7 @@ der Verbundsysteme
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{figure}
-    \includegraphics[width=1\textwidth]{images/UNB.jpg}
+    \includegraphics[width=1.1\textwidth]{images/UNB.jpg}
 %Quelle:http://www.bpb.de/politik/wirtschaft/energiepolitik/148524/ausbau-des-stromnetzes
 \end{figure}
 \end{column}
@@ -221,10 +284,10 @@ ab
 %führen
 \item im Stromnetz kann keine Energie gespeichert werden
   \begin{itemize}
-    \item[\rightarrow]  erzeugter Leistung $\stackrel{!}{=}$ abgenommene Leistung 
+    \item[\rightarrow]  erzeugter Leistung $\stackrel{!}{=}$ abgenommene Leistung
   \end{itemize}
-  \item Schwankungen in
-  der Relation von abgenommener und erzeugter Leistung erzeugt Abweichungen in der Frequenz
+  \item Schwankungen in der Relation von abgenommener
+  und erzeugter Leistung erzeugt Abweichungen in der Frequenz
 \end{itemize}
 \end{frame}
 
@@ -272,14 +335,7 @@ Notwendigkeit von Regelbarer Leistung um Frequenz konstant zu halten
       \item[-] Unterscheidung zwischen positiver und negativer Regelenergie
       \item[-] Breitstellung durch z. B. Pumpspeicherkraftwerken, Gasturbinen, Biogasanlagen oder Blockheizkraftwerke
     \end{itemize}
-    \item Tertiärregelung(Minutenreserve) MRL
-    \begin{itemize}
-      \item[-] Aktivierung innerhalb von \SI{15}{\minute}
-      \item[-] abzudeckender Zeitraum mehrere Stunden bei Störungen
-      \item[-] Unterscheidung zwischen positiver und negativer Regelenergie
-      \item[-] Breitstellung durch Kraftwerke identisch zu SRL oder Verbraucher deren Lasten abgeworfen werden
     \end{itemize}
-  \end{itemize}
 
 \end{frame}
 
@@ -287,42 +343,123 @@ Notwendigkeit von Regelbarer Leistung um Frequenz konstant zu halten
 {
 \setbeamertemplate{footline}{}
 \begin{frame}
+\begin{itemize}
+\item Tertiärregelung(Minutenreserve) MRL
+\begin{itemize}
+  \item[-] Aktivierung innerhalb von \SI{15}{\minute}
+  \item[-] abzudeckender Zeitraum mehrere Stunden bei Störungen
+  \item[-] Unterscheidung zwischen positiver und negativer Regelenergie
+  \item[-] Breitstellung durch Kraftwerke identisch zu SRL oder Verbraucher deren Lasten abgeworfen werden
+\end{itemize}
+\end{itemize}
+
   \begin{figure}
-  \includegraphics[width=0.9\textwidth]{images/Regelleistung.png}
+  \includegraphics[width=0.7\textwidth]{images/Regelleistung.png}
 \end{figure}
 %Quelle:https://fenecon.de/page/stromspeicher-energy-pool
 \end{frame}
 }
 
-\begin{frame}{Energiewende und folgen im Stromnetz}
-  \begin{columns}
-  \begin{column}{0.5\textwidth}
-konventionelles Stromnetz:
+
+\begin{frame}{Paradigmenwechsel}
 \begin{itemize}
-  \item Kraftwerkleistungen werden an Lastprofil angepasst
-  \item "Einbahnstraße im Stromnetz" Kraftwerk$\rightarrow$Verbraucher
-Höchspannung$\rightarrow$Niederspannung
+  \item Stromindustie und auch Verbraucher
+  steht vor bsw. befinden sich
+  in einem Paradigmenwechsel hervorgerufen durch die Energiewende
 \end{itemize}
-  \end{column}
-  \begin{column}{0.5\textwidth}
-neues Stromnetz:
-\begin{itemize}
-\item EE-Kraftwerkleistungen nur noch bedingt (z.B Wasser) oder gar nicht (z.B Wind/Sonne) steuerbar
-\begin{itemize}
-  \item[$\rightarrow$] keine Anpassung an Lastprofil möglich
-\end{itemize}
-\item durch erneuerbare Energiequellen  Höchstspannung$\leftrightarrows$Niederspannung
-\end{itemize}
-\end{column}
-\end{columns}
-\textbf{\textcolor{tugreen}{Fazit:}} Notwendigkeit des Netz-um/aus-bau durch Energiewende
+%
+ \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+ \textbf{\textcolor{tugreen}{ Ursprüngliche Situation:}}
+
+ \begin{itemize}
+     \item[-] Kraftwerkleistungen werden an Lastprofil angepasst
+     \item[-] Lastprofil der Verbraucher bekannt und wenig fluktuierend
+         \item[$\rightarrow$] geringe Schwankungen der Netz-Frequenz
+         \item[$\rightarrow$] geringer Einsatz von Regelenergie
+   \end{itemize}
+ &
+ \textbf{\textcolor{tugreen}{Neue Situation:}}
+    \begin{itemize}
+      \item[-] Erneuerbare Energie wird zum größten Teil aus volatilen Quellen wie Wind und Sonne gewonnen
+      \item[-] Nur wenige Grundlastfähige EE-Quellen wie Wasserkraft und Biogas
+      \item[$\rightarrow$] EE-Kraftwerkleistungen nur noch bedingt oder gar nicht steuerbar
+      \item[$\rightarrow$] keine Anpassung an Lastprofil möglich
+      \item[$\rightarrow$] Netz-Frequenz fluktuierd stärker
+      \item[$\rightarrow$] hoher Einsatz von Regelenergie, um Netzstabilität zu gewährleistern
+    \end{itemize}\\
+  \end{tabular}
 \end{frame}
 
-\begin{frame}{Netzausbau}
+
+\begin{frame}{Folgen der Energiewende auf Stromnetz}
+  \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+\textbf{\textcolor{tugreen}{Ursprüngliches Stromnetz:}}
+\begin{itemize}
+  \item Großkraftwerke wie z. B. Kern- oder Braunkohlekraftwerke,
+  welche eine Region mit Strom versorgen
+  \item "Einbahnstraße im Stromnetz"
+\item[$\rightarrow$]  Kraftwerk$\rightarrow$Stromnetz$\rightarrow$Verbraucher
+\item[$\rightarrow$]  Höchspannung$\rightarrow$Niederspannung
+\end{itemize}
+&
+\textbf{\textcolor{tugreen}{Neues Stromnetz:}}
+
+\begin{itemize}
+  \item Erneuerbare Energiequellen können
+  sowohl zentral z.B. Offshore Windparks als auch
+  dezentral beim Verbraucher selbst
+  produzierte werden
+\item[$\rightarrow$]  Kraftwerk$\rightarrow$Stromnetz$\leftrightarrows$Verbraucher
+\item[$\rightarrow$]  Höchstspannung$\leftrightarrows$Niederspannung
+\end{itemize}
+\end{tabular}
+\begin{itemize}
+  % \textbf{\textcolor{tugreen}{Fazit:}}
+\item[Fazit:] Notwendigkeit des Netz-um/aus-bau durch Energiewende
+damit eine sichere Versorgen gegeben bleibt.
+\item[$\rightarrow$] Netzentwicklungsplan NEP 2017-2030 der Bundesnetzagentur 
+\end{itemize}
 
 \end{frame}
+
+{
+\setbeamertemplate{footline}{}
+ \begin{frame}{Netzausbau}
+%     \begin{figure}
+%     \includegraphics[width=0.55\textwidth]{images/Ausbau.PNG}
+%   \end{figure}
+\begin{overpic}[width=0.5\textwidth,tics=10]
+{images/NAusbau1.jpg}
+\put(80,10){\includegraphics[scale=0.5]{images/NLegende.PNG}}
+\end{overpic}
+\end{frame}
+}
+
+\begin{frame}{Zukunft Smart-Gird}
+\begin{itemize}
+  \item intelligentes Stromnetz durch durch Energiewende und
+   die damit einhergehenden Volatile Stromerzeuger nötig
+  \item Smart-Gird bietet Möglichkeit zu
+  verfügungstehenden Strom effektiv zu nutzen
+  \item Datenaustausch zwischen Netzbetreiber,
+       Verbraucher und Erzeuger z. B. Smart-Meters in Haushaltens
+  \item[\rightarrow] mehr Kontrolle und Information
+   für die Netzbetreiber für besseres Lastmanagement
+   \item zusätzlich Anpassung der Nachfrage in Haushalten (Smart-Houses)
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+  \includegraphics[width=1\textwidth]{images/smart-grid.jpg}
+  %https://www.business.att.com/solutions/Service/internet-of-things/smart-cities/iot-smart-grid/
+\end{figure}
+\end{frame}
+
 \begin{frame}{Blackout}
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\begin{itemize}
+  \item was wenn der Strom weg ist
+\end{itemize}
 \end{frame}
 
 
@@ -356,13 +493,23 @@ neues Stromnetz:
 }
 
 \begin{frame}{Spotmarkt}
+  \begin{columns}
+  \begin{column}{0.3\textwidth}
   \begin{itemize}
     \item Spotmarkt in Paris an der EPEX SPOT
     \item Handel von kurzfristig lieferbaren Strommengen in bestimmten Blöcken
     \item Im Intraday-Handel (Lieferung am selben Tag)
     \item Im Day-Ahead-Handel (Lieferung am Folgetag)
   \end{itemize}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+  \begin{figure}
+  \includegraphics[width=1\textwidth]{images/Stromborse_stromverbrauch_lastprofil.png}
+  \end{figure}
+\end{column}
+\end{columns}
 \end{frame}
+
 
 \begin{frame}{Merit-Order}
 \begin{itemize}
@@ -379,25 +526,27 @@ neues Stromnetz:
 \end{itemize}
 \end{frame}
 
-{
-\setbeamertemplate{footline}{}
 \begin{frame}
   \begin{figure}
-  \includegraphics[width=1\textwidth]{images/Merit-order-curve-2.jpg}
+  \includegraphics[width=1\textwidth]{images/Meritorder.png}
 \end{figure}
 %Quelle:https://www.next-kraftwerke.be
 \end{frame}
-}
 
-{
-\setbeamertemplate{footline}{}
+
 \begin{frame}
   \begin{figure}
   \includegraphics[width=1\textwidth]{images/Merit.png}
 \end{figure}
 %Quelle:https://www.next-kraftwerke.be
 \end{frame}
-}
+
+
+\begin{frame}
+  \begin{figure}
+  \includegraphics[width=0.9\textwidth]{images/10_1_2018_spot.PNG}
+\end{figure}
+\end{frame}
 
 \begin{frame}{Terminmarkt}
 \begin{itemize}
@@ -409,6 +558,13 @@ neues Stromnetz:
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+  \begin{figure}
+  \includegraphics[width=0.9\textwidth]{images/Phelix_1monat.PNG}
+\end{figure}
+\end{frame}
+
+
 \begin{frame}{Regelenergiemarkt}
 \begin{itemize}
   \item Bedarf an Regelenergien von PRL, SRL und MRL werden durch Ausschreibung
@@ -417,8 +573,9 @@ der ÜNB gedeckt
 \item MRL werden Täglich neu ausgeschrieben und nach Merit-Order-Liste bei Bedarf abgerufen
 \item Preis für Regleenergien ??
 \end{itemize}
-
 \end{frame}
+
+
 \begin{frame}{Erneuerbare-Energien-Gesetz EEG}
    \begin{itemize}
      \item das EEG wurde im Jahr 2000 eingeführt und mehrmals überarbeitet aktuell EEG 2017
@@ -481,10 +638,10 @@ der ÜNB gedeckt
 \begin{frame}{Entwicklung}
 
 \end{frame}
-\end{document}
 
 
-\begin{frame}{Paradigmenwechsel}
+
+\begin{frame}{Zusammenfassung}
 
 \end{frame}
 
@@ -492,13 +649,18 @@ der ÜNB gedeckt
 \begin{frame}{Backup}
 
 \end{frame}
+%
+% {
+% \setbeamertemplate{footline}{}
+% \begin{frame}
+%   \begin{figure}
+%   \includegraphics[width=0.9\textwidth]{images/eeg-umlage.png}
+%   \end{figure}
+% %Quelle:https://1-stromvergleich.com/strom-report/eeg-umlage/#eeg-umlage-boersenpreis-industrierabatt
+% \end{frame}
+% }
 
-{
-\setbeamertemplate{footline}{}
-\begin{frame}
-  \begin{figure}
-  \includegraphics[width=0.9\textwidth]{images/eeg-umlage.png}
-  \end{figure}
-%Quelle:https://1-stromvergleich.com/strom-report/eeg-umlage/#eeg-umlage-boersenpreis-industrierabatt
-\end{frame}
-}
+
+
+
+\end{document}
